@@ -1,2 +1,3 @@
 # ArnaudGhali_4_01092021
-Projet 4 Openclassrooms
+Projet 4 Openclassrooms -  SEO (Search Engine Optimization) - optimisation du site pour en améliorer sa visibilité : référencement, accessibilité, ...
+
