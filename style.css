@@ -677,7 +677,8 @@ a {
 }
 
 p {
-    font-size: 11px;
+    /*adaptation - cohérence */
+    font-size: 17px;
 }
 
 .tight-width-whitespace {
@@ -713,6 +714,7 @@ h3 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
+    line-height: 1.4em;
     color: #333333!important;
 }
 
@@ -753,7 +755,8 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    /* Modification contraste - ACCESSIBILITE */
+    background-color: rgba(8, 8, 8, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
@@ -822,7 +825,8 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    /* changement format d'image */
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
