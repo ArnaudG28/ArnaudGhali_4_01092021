@@ -5,7 +5,6 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 16px!important;
 }
 
 a,
@@ -677,6 +676,11 @@ a {
     margin: auto auto auto auto;
 }
 
+p {
+    /*adaptation - cohérence */
+    font-size: 17px;
+}
+
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
@@ -710,6 +714,7 @@ h3 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
+    line-height: 1.4em;
     color: #333333!important;
 }
 
@@ -732,6 +737,11 @@ h4 {
     margin-top: 24px;
 }
 
+/* Modification contraste - ACCESSIBILITE */
+.grey {
+    color: #333333!important;
+}
+
 .white {
     color: #FFFFFF!important;
 }
@@ -750,7 +760,8 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    /* Modification contraste - ACCESSIBILITE */
+    background-color: rgba(8, 8, 8, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
@@ -819,6 +830,7 @@ h4 {
 }
 
 .bg-presentation {
+    /* changement format d'image */
     background-image: url("img/image-de-presentation.jpg");
 }
 
@@ -845,13 +857,13 @@ h4 {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -869,6 +881,10 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
+    .bloc {
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -877,6 +893,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -1030,20 +1048,4 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-*:focus {
-  border: gray dashed 1px!important;
 }
